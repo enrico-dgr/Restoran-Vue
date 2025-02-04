@@ -15,6 +15,7 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue'
 import CardTeam, { type CardTeamProps } from './CardTeam.vue'
 import Section from '@/components/Section/SectionComponent.vue'
 
@@ -22,7 +23,7 @@ const cards_mock: CardTeamProps[] = [
   {
     name: 'John Doe',
     description: 'Master Chef',
-    img: '@/assets/img/team-1.png',
+    img: '/src/assets/img/team-1.png',
     fb: 'https://facebook.com',
     x: 'https://twitter.com',
     ig: 'https://instagram.com',
@@ -30,7 +31,7 @@ const cards_mock: CardTeamProps[] = [
   {
     name: 'Dohn Joe',
     description: 'Master Chef',
-    img: '@/assets/img/team-2.png',
+    img: '/src/assets/img/team-2.png',
     fb: 'https://facebook.com',
     x: 'https://twitter.com',
     ig: 'https://instagram.com',
@@ -38,7 +39,7 @@ const cards_mock: CardTeamProps[] = [
   {
     name: 'John Snow',
     description: 'Master Chef',
-    img: '@/assets/img/team-3.png',
+    img: '/src/assets/img/team-3.png',
     fb: 'https://facebook.com',
     x: 'https://twitter.com',
     ig: 'https://instagram.com',
@@ -46,7 +47,7 @@ const cards_mock: CardTeamProps[] = [
   {
     name: 'Son Goku',
     description: 'Master Chef',
-    img: '@/assets/img/team-4.png',
+    img: '/src/assets/img/team-4.png',
     fb: 'https://facebook.com',
     x: 'https://twitter.com',
     ig: 'https://instagram.com',
@@ -56,10 +57,12 @@ const cards_mock: CardTeamProps[] = [
 // Duplicate cards to make it two rows
 cards_mock.push(...cards_mock)
 
-defineProps<{
+const props = defineProps<{
   cards?: CardTeamProps[]
   twoRows?: boolean
 }>()
+
+const cards = ref(props.cards ?? cards_mock)
 </script>
 
 <style lang="scss">

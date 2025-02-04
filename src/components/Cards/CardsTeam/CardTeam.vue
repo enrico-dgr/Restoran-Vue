@@ -3,8 +3,8 @@
     <div class="img">
       <img :src="props.img" :alt="props.name" />
     </div>
-    <h5>{name}</h5>
-    <p>{description}</p>
+    <h5>{{ props.name }}</h5>
+    <p>{{ props.description }}</p>
     <div class="socials">
       <a :href="props.fb">
         <FontAwesomeIcon :icon="faFacebookF" />

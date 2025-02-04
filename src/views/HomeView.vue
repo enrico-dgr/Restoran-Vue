@@ -1,12 +1,3 @@
-<script setup lang="ts">
-import HeaderComponent from '@/components/Header/HeaderComponent.vue'
-import CardsService from '@/components/Cards/CardsService/CardsService.vue'
-import { faCartPlus, faHeadset, faUserTie, faUtensils } from '@fortawesome/free-solid-svg-icons'
-import CardsTeam from '@/components/Cards/CardsTeam/CardsTeam.vue'
-
-const defaultDescription = 'Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam'
-</script>
-
 <template>
   <HeaderComponent />
   <CardsService
@@ -36,3 +27,13 @@ const defaultDescription = 'Diam elitr kasd sed at elitr sed ipsum justo dolor s
   />
   <CardsTeam />
 </template>
+
+<script setup lang="ts">
+import HeaderComponent from '@/components/Header/HeaderComponent.vue'
+import CardsService from '@/components/Cards/CardsService/CardsService.vue'
+import CardsTeam from '@/components/Cards/CardsTeam/CardsTeam.vue'
+
+import { faCartPlus, faHeadset, faUserTie, faUtensils } from '@fortawesome/free-solid-svg-icons'
+
+const defaultDescription = 'Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam'
+</script>

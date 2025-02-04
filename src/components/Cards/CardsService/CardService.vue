@@ -37,6 +37,10 @@ const classes = computed(() => {
 @use '@/styles/functions.scss' as f;
 
 .card.is--service {
+  > * {
+    transition: 0.5s;
+  }
+
   &:hover {
     > * {
       color: v.$white;
