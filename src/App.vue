@@ -1,12 +1,19 @@
-<script setup lang="ts">
-import { RouterView } from 'vue-router'
-</script>
-
 <template>
   <div class="container-xxl bg-white p-0">
+    <ContentLoadingSpinner />
+    <ScrollUpButton />
     <RouterView />
   </div>
 </template>
+
+<script setup lang="ts">
+import { RouterView } from 'vue-router'
+import ContentLoadingSpinner from './components/ContentLoadingSpinner/ContentLoadingSpinner.vue'
+import ScrollUpButton from './components/ScrollUpButton/ScrollUpButton.vue'
+import useTitle from './composables/useTitle'
+
+useTitle()
+</script>
 
 <style scoped>
 header {

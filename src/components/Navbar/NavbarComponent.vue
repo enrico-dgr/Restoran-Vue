@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import getScrollThreshold from '@/composables/getScrollThreshold'
+import useScrollThreshold from '@/composables/useScrollThreshold'
 import routes from '@/routes'
 import { computed, ref } from 'vue'
 import LinkOrGroup, { type NavbarLink } from './LinkOrGroup.vue'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faBars, faUtensils } from '@fortawesome/free-solid-svg-icons'
 
-const { isScrolled } = getScrollThreshold(40)
+const isScrolled = useScrollThreshold(40)
 const showLinksContainer = ref(false)
 const setShowLinksContainer = (value: boolean) => {
   showLinksContainer.value = value

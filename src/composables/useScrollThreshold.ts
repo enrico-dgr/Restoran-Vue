@@ -1,6 +1,6 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 
-export default function getScrollThreshold(threshold: number, axis: 'x' | 'y' = 'y') {
+export default function useScrollThreshold(threshold: number, axis: 'x' | 'y' = 'y') {
   const isScrolled = ref(false)
 
   const handleScroll = () => {
@@ -16,7 +16,5 @@ export default function getScrollThreshold(threshold: number, axis: 'x' | 'y' = 
     window.removeEventListener('scroll', handleScroll)
   })
 
-  return {
-    isScrolled,
-  }
+  return isScrolled
 }
