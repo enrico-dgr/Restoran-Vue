@@ -25,6 +25,8 @@
     ]"
     :showHeader="false"
   />
+  <AboutUs />
+  <FoodMenu :numberOfElements="8" />
   <CardsTeam />
 </template>
 
@@ -34,6 +36,8 @@ import CardsService from '@/components/Cards/CardsService/CardsService.vue'
 import CardsTeam from '@/components/Cards/CardsTeam/CardsTeam.vue'
 
 import { faCartPlus, faHeadset, faUserTie, faUtensils } from '@fortawesome/free-solid-svg-icons'
+import AboutUs from '@/components/AboutUs/AboutUs.vue'
+import FoodMenu from '@/components/FoodMenu/FoodMenu.vue'
 
 const defaultDescription = 'Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam'
 </script>
