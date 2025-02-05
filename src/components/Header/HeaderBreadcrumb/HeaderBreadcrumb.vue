@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
-import routes from '../../../routes'
+import routes from '../../../router/routes'
 import HeaderBreadcrumbItem from './HeaderBreadcrumbItem.vue'
 
 const route = useRoute()

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
-import routes from '../../../routes'
+import routes from '../../../router/routes'
 
 interface Props {
   section: string
@@ -21,10 +21,7 @@ defineProps<Props>()
   </RouterLink>
   <span
     v-else
-    :class="[
-      'header-breadcrumb__item',
-      isLink ? 'text-white' : 'text-primary'
-    ].join(' ')"
+    :class="['header-breadcrumb__item', isLink ? 'text-white' : 'text-primary'].join(' ')"
   >
     {{ section }}
   </span>

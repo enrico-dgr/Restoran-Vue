@@ -1,6 +1,6 @@
 import constants from '../../constants'
 import { delay } from '../../utils/promises'
-import { Review } from './types'
+import { type Review } from './types'
 
 const all = async (): Promise<Review[]> => {
   const reviews: Review[] = []

@@ -1,13 +1,11 @@
 <template>
   <HeaderComponent />
-  <AboutUs />
-  <CardsTeam />
+  <ReservationComponent />
   <FooterComponent />
 </template>
 
 <script setup lang="ts">
-import AboutUs from '@/components/AboutUs/AboutUs.vue'
-import CardsTeam from '@/components/Cards/CardsTeam/CardsTeam.vue'
+import ReservationComponent from '@/components/Reservation/ReservationComponent.vue'
 import FooterComponent from '@/components/Footer/FooterComponent.vue'
 import HeaderComponent from '@/components/Header/HeaderComponent.vue'
 </script>

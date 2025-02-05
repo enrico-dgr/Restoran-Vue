@@ -1,5 +1,5 @@
 <template>
-  <li :class="`meal-type ${props.active ? 'active' : ''}`" @click="{ onClick }">
+  <li :class="`meal-type ${props.active ? 'active' : ''}`">
     <FontAwesomeIcon :icon="props.icon" class="text-primary" size="2x" />
     <div class="meal-type__description">
       <small>{{ props.description }}</small>
@@ -17,7 +17,6 @@ interface Props {
   icon: IconDefinition
   description: string
   name: string
-  onClick: () => void
 }
 
 const props = defineProps<Props>()

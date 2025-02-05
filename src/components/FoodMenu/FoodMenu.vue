@@ -30,7 +30,7 @@
             />
           </ul>
         </template>
-        <ul v-else>
+        <ul v-else class="meals-list active">
           <FoodMenuMealPlaceholder
             v-for="(_, i) in Array.from({ length: props.numberOfElements })"
             :key="`meal-placeholder-${i}`"
@@ -125,13 +125,13 @@ onMounted(() => {
       })
       .then((meals) => {
         addOrUpdateList(meals, mealType)
+
+        if (mealsLists.value.length > 0) {
+          mealsState.value = 'ready'
+        }
       })
       .catch(console.error),
   )
-
-  if (mealsLists.value.length > 0) {
-    mealsState.value = 'ready'
-  }
 })
 </script>
 

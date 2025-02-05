@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import useScrollThreshold from '@/composables/useScrollThreshold'
-import routes from '@/routes'
+import routes from '@/router/routes'
 import { computed, ref } from 'vue'
 import LinkOrGroup, { type NavbarLink } from './LinkOrGroup.vue'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'

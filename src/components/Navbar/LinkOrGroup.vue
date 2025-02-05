@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import routes from '@/routes'
+import routes from '@/router/routes'
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { RouterLink } from 'vue-router'
 

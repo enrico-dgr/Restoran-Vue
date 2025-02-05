@@ -1,4 +1,4 @@
-import routes from '@/routes'
+import routes from '@/router/routes'
 import { useHead } from '@unhead/vue'
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
