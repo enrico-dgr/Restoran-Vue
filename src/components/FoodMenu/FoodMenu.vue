@@ -1,11 +1,11 @@
 <template>
   <SectionComponent :class="`food-menu ${visualized ? 'show fadeInUp' : ''}`" ref="target">
-    <div className="food-menu__description">
-      <h5 className="section-title before after">Food Menu</h5>
-      <h1 className="mb-5">Most Popular Items</h1>
+    <div class="food-menu__description">
+      <h5 class="section-title before after">Food Menu</h5>
+      <h1 class="mb-5">Most Popular Items</h1>
     </div>
-    <div className="food-menu__sections">
-      <ul className="meal-types">
+    <div class="food-menu__sections">
+      <ul class="meal-types">
         <FoodMenuMealType
           v-for="({ category, description, icon }, i) in mealTypes"
           :key="`meal-type_${category}_${i}`"
@@ -16,7 +16,7 @@
           @click="() => setActiveCategory(category)"
         />
       </ul>
-      <div className="meals">
+      <div class="meals">
         <template v-if="mealsState === 'ready'">
           <ul
             v-for="({ meals, category }, i) in mealsLists"
